@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+body {
+    background:linear-gradient(#000,rgb(38, 10, 70)) ;
+    height: 100vh;
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+
+section { 
+    background: url(stars1.png);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ul{
+    text-align: center;
+}
+
+ul:hover a{
+    opacity: 0;
+}
+ul li {
+
+    list-style: none;
+    margin: 14px 0;
+}
+
+ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 500;
+    letter-spacing: 4px;
+    background: rgb(21, 53, 85);
+    padding: 6px 15px;
+    border-radius: 10px;
+    display: inline-block;
+    width: 150px;
+    transition: 0.5s;
+    position: relative;
+    z-index: 10;
+}
+
+ul li a:hover{
+    transform: scale(1.4);
+    background: rgb(107, 6, 85);
+    opacity: 1;
+}
+
+ul li::after{
+    content: attr(data-text);
+    color: white;
+    position: absolute;
+    left: 50%;
+    top :50%;
+    transform: translate(-50%,-50%);
+    font-size: 100px;
+    font-family: 'Almarai', sans-serif;
+    opacity: 0;
+    letter-spacing: 50px;
+    pointer-events: none;
+    transition: 0.7s;
+
+    
+}
+
+ul li:hover:after{
+    opacity: 0.5;
+    letter-spacing: 0;
+}
+
+ul li::before{
+    content: '';
+    width: 180px;
+    height: 80px;
+    background: white;
+    position: absolute;
+    left: 50%;
+    top :50%;
+    transform: translate(-50%,130%);
+    border-radius: 50%;
+    box-shadow: 0 0 80px orangered;
+    opacity: 0;
+    transition: 0.5s;
+    
+}
+ul li:hover::before{
+    opacity: 0.5;
+    width: 80px;
+}
